@@ -17,7 +17,7 @@ const Signin = () => {
               {/* Sign in form  */}
 
               New to Bredit? {' '}
-              <Link href='/sign-up' className='hover:text-zinc-900 text-sm underline underline-offset-4'>Sign up</Link>
+              <Link href='/sign-in' className='hover:text-zinc-900 text-sm underline underline-offset-4'>Sign up</Link>
             </p>
         </div>
         </div>

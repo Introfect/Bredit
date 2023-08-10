@@ -3,13 +3,13 @@ import Link from 'next/link'
 import { Icons } from './Icons'
 import { buttonVariants } from './ui/Button'
 import UserAccountNav from './UserAccountNav'
-import { getServerSession } from 'next-auth'
+import { getServerSession } from 'next-auth/next'
 
 // import { UserAccountNav } from './UserAccountNav'
 // import SearchBar from './SearchBar'
 
 const Navbar = async () => {
-  const session = await getServerSession(authOptions)
+  const session = await getAuthSession()
   session?console.log(session.user):null
   return (
     <div className='fixed top-0 inset-x-0 h-fit bg-zinc-100 border-b border-zinc-300 z-[10] py-2'>
