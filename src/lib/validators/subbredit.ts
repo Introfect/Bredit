@@ -5,7 +5,7 @@ export const SubbreditValidator= z.object({
 }) 
 
 export const SubbreditSubscriptionValidator= z.object({
-    subbreditId: z.string()
+    subredditId: z.string()
 }) 
 
 

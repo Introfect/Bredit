@@ -5,6 +5,8 @@ import { db } from '@/lib/db';
 import { notFound } from 'next/navigation';
 import CreatePost from '@/components/CreatePost';
 import { getServerSession } from 'next-auth';
+import PostFeed from '@/components/PostFeed';
+import {INFINITE_SCROLL} from "@/config"
 interface pageProps {
     params:{
         slug:string; 
@@ -24,7 +26,11 @@ const page= async ({params}:PageProps) => {
                     comments:true,
                     subreddit:true
                 },
-                take:2
+                orderBy:{
+                    createdAt:'desc'
+
+                },
+                take: INFINITE_SCROLL
             }
         }
     })
@@ -34,7 +40,13 @@ const page= async ({params}:PageProps) => {
     <h1 className='font-bold text-3xl md:text-4xl h-12'>
     {`r/${slug}`}
     </h1>
+    <div>
+
     <CreatePost session={session}/>
+    <PostFeed initialPosts={subbredit.posts}
+    subredditName={subbredit.name}
+    />
+    </div>
      </> 
      );
 }
