@@ -11,7 +11,7 @@ import Post from './Post'
 import { useSession } from 'next-auth/react'
 
 interface PostFeedProps {
-  initialPosts: ExtendedPost[]
+  initialPosts: ExtendedPost[],
   subredditName?: string
 }
 
