@@ -32,7 +32,7 @@ function Post({ subredditName, post, commentAmt, votesAmt: _votesAmt,currentVote
               <>
                 <a
                   className="underline text-zinc-500 text-sm underline-offset-2"
-                  href={`r/${subredditName}`}
+                  href={`http://localhost:3000/r/${subredditName}`}
                 >
                   r/{subredditName}
                 </a>
@@ -42,7 +42,7 @@ function Post({ subredditName, post, commentAmt, votesAmt: _votesAmt,currentVote
             <span>Posted by u/{post.author.name}</span>{" "}
             {formatTimeToNow(new Date(post.createdAt))}
           </div>
-          <a href={`/r/${subredditName}/post/${post.id}`}>
+          <a href={`http://localhost:3000/r/${subredditName}/post/${post.id}`}>
             <h1 className="text-lg font-semibold py-2 leading-6 text-gray-900">
               {post.title}
             </h1>
