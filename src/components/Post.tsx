@@ -42,7 +42,7 @@ function Post({ subredditName, post, commentAmt, votesAmt: _votesAmt,currentVote
             <span>Posted by u/{post.author.name}</span>{" "}
             {formatTimeToNow(new Date(post.createdAt))}
           </div>
-          <a href={`http://localhost:3000/r/${subredditName}/post/${post.id}`}>
+          <a href={`https://bredit-three.vercel.app/r/${subredditName}/post/${post.id}`}>
             <h1 className="text-lg font-semibold py-2 leading-6 text-gray-900">
               {post.title}
             </h1>
