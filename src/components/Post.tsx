@@ -32,7 +32,7 @@ function Post({ subredditName, post, commentAmt, votesAmt: _votesAmt,currentVote
               <>
                 <a
                   className="underline text-zinc-500 text-sm underline-offset-2"
-                  href={`http://localhost:3000/r/${subredditName}`}
+                  href={`https://bredit-three.vercel.app/r/${subredditName}`}
                 >
                   r/{subredditName}
                 </a>
