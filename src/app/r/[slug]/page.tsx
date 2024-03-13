@@ -1,5 +1,4 @@
 import { FC} from 'react'
-import { PageProps } from '../../../../.next/types/app/layout';
 import { authOptions, getAuthSession } from '@/lib/auth';
 import { db } from '@/lib/db';
 import { notFound } from 'next/navigation';
@@ -7,7 +6,7 @@ import CreatePost from '@/components/CreatePost';
 import { getServerSession } from 'next-auth';
 import PostFeed from '@/components/PostFeed';
 import {INFINITE_SCROLL} from "@/config"
-interface pageProps {
+interface PageProps {
     params:{
         slug:string; 
     }

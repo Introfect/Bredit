@@ -3,14 +3,11 @@ import Providers from '@/components/Providers'
 import { Toaster } from '@/components/ui/toaster'
 import { cn } from '@/lib/utils'
   import '@/styles/globals.css'
-import {Inter} from 'next/font/google'
-
 
 export const metadata = {
   title: 'BreadIt',
   description: 'A Reddit clone built with Next.js and TypeScript.',
 }
-const inter =Inter({subsets:['latin']})
 
 export default function RootLayout({
   children,
@@ -20,7 +17,7 @@ export default function RootLayout({
   authModal: React.ReactNode
 }) {
   return (
-    <html lang='en' className={cn('bg-white text-slate-900 antialiased light ',inter.className)}>
+    <html lang='en' className={cn('bg-white text-slate-900 antialiased light ',)}>
       <body className='min-h-scree pt-12 bg-slate-50 antialiased '>
         <Providers>
 

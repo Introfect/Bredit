@@ -7,12 +7,13 @@ import { useMutation } from '@tanstack/react-query'
 import axios, { AxiosError } from 'axios'
 import { CreateSubbreditPayload } from '@/lib/validators/subbredit'
 import { useCustomToast } from '@/hooks/use-custom-toast'
+import {toast} from "@/hooks/use-toast"
 
-function page() {
+function Page() {
   const { loginToast }= useCustomToast()
     const [input, setInput]=useState<string>('')
     const router= useRouter()
-    const toast=useCustomToast()
+  
     const {mutate:createCommunity, isLoading}=useMutation({
       mutationFn: async ()=>{
         const payload: CreateSubbreditPayload={
@@ -89,4 +90,4 @@ function page() {
   )
 }
 
-export default page
+export default Page
